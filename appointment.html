@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - GoodLife Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h2>GoodLife Clinic</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="doctors.html">Doctors</a>
+            <a href="schedule.html">Working Sessions</a>
+            <a href="appointment.html">Appointment</a>
+            <a href="faq.html">FAQ</a>
+            <a href="news.html">News</a>
+        </nav>
+    </header>
+
+    <section class="appointment-hero">
+        <h1>Book an Appointment</h1>
+        <p>Schedule your visit with our experienced healthcare professionals</p>
+    </section>
+
+    <section class="appointment-section">
+        <div class="appointment-container">
+            <div class="appointment-info">
+                <div class="info-card">
+                    <img src="images/phone-icon.png" alt="Call" class="info-icon">
+                    <h3>Call to Book</h3>
+                    <p>(+256) 756628007</p>
+                    <span>Available 24/7</span>
+                </div>
+                <div class="info-card">
+                    <img src="images/email-icon.png" alt="Email" class="info-icon">
+                    <h3>Email Us</h3>
+                    <p>goodlifeclinic256@.com</p>
+                    <span>Response within 24h</span>
+                </div>
+                <div class="info-card">
+                    <img src="images/location-icon.png" alt="Location" class="info-icon">
+                    <h3>Visit Us</h3>
+                    <p>123 Healthcare Avenue</p>
+                    <span>Medical District</span>
+                </div>
+            </div>
+
+            <div class="appointment-form">
+                <h2>Schedule Your Visit</h2>
+                <p>Fill out the form below and we'll confirm your appointment within 24 hours.</p>
+
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name">
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="email" placeholder="you@example.com">
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="+1 234 567 8900">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date of Birth *</label>
+                        <input type="date" id="dob">
+                        <span class="error" id="dobError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Department *</label>
+                        <select id="department">
+                            <option value="">Choose a department</option>
+                            <option value="general">General Medicine</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="psychology">Psychology</option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="neurology">Neurology</option>
+                        </select>
+                        <span class="error" id="deptError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Doctor *</label>
+                        <select id="doctor">
+                            <option value="">Select a doctor</option>
+                            <option value="john">Dr. John Doe - General Medicine</option>
+                            <option value="sarah">Dr. Sarah Kim - Psychology</option>
+                            <option value="michael">Dr. Michael Chen - Cardiology</option>
+                            <option value="emily">Dr. Emily Watson - Pediatrics</option>
+                            <option value="david">Dr. David Lee - Neurology</option>
+                        </select>
+                        <span class="error" id="doctorError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label>Appointment Date *</label>
+                            <input type="date" id="appDate">
+                            <span class="error" id="dateError"></span>
+                        </div>
+                        <div class="form-group half">
+                            <label>Preferred Time *</label>
+                            <select id="appTime">
+                                <option value="">Select time</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                            </select>
+                            <span class="error" id="timeError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Symptoms / Reason for Visit *</label>
+                        <textarea id="symptoms" rows="4" placeholder="Please describe your symptoms or reason for consultation..."></textarea>
+                        <span class="error" id="symptomsError"></span>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <label>
+                            <input type="checkbox" id="terms">
+                            I agree to the Terms of Service and Privacy Policy *
+                        </label>
+                        <span class="error" id="termsError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Confirm Appointment</button>
+                </form>
+
+                <div id="successMessage" class="success-message">
+                    <div class="success-icon">✓</div>
+                    <h3>Appointment Request Sent!</h3>
+                    <p>Your appointment request has been submitted. We'll send a confirmation to your email within 24 hours.</p>
+                    <button onclick="location.href='index.html'">Back to Home</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 GoodLife Clinic</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
